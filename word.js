@@ -1,40 +1,20 @@
-// I am very evil indeed.
-Array.prototype.pick = function () {
-    return this[Math.floor(Math.random() * this.length)];
+var pick = function (arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
 }
 
-// invoke with a number to generate
-module.exports = function Word(nPhonemes)
+module.exports = function Word(nPhonemes, phonemes)
 {
-    // Hardcoded for now. Might do other languages though.
-	var phonemes = [
-			[
-				"a", "aa", "ae", "ai", "au",
-				"e", "ea", "ee", "ei", "eu",
-				"i", "ia", "ie", "iu",
-				"o", "oa", "oe", "oi", "oo", "ou", "ough",
-				"u", "ui",
-				"y"
-			],
-			[
-				"b", "br", "c", "ck", "cr", "cs", "ct", "cy",
-				"d", "dr", "f", "fh", "g", "gh", "gth",
-				"h", "j", "k", "l", "ll", "m", "mm",
-				"n", "nn", "p", "ph", "qu", "r",
-				"s", "sc", "sh", "st", "str", "t", "tch", "tr",
-				"v", "w", "wh", "x", "y", "z"
-			]
-		],
-		word = '',
+    var word = '',
         // Choose vowel or consonant
-		current = [0,1].pick();
+        current = pick([0,1]);
 
-	for (var i = 1; i <= nPhonemes; i++) {
+    for (var i = 1; i <= nPhonemes; i++) {
+        var set = (1 == i)?'start':((nPhonemes == i)?'end':'middle');
         // Append a random letter
-		word += phonemes[current].pick();
+        word += pick(phonemes[set][current]);
         // and flip the bit so we pick the other next time
-		current = Number(!current);
-	}
+        current = Number(!current);
+    }
 
-	return word;
+    return word;
 };
