@@ -36,20 +36,20 @@
     ],
     "end": [
         [
-            "a", "aa", "ae", "ai", "au",
-            "e", "ea", "ee", "ei", "eu",
-            "i", "ia", "ie", "iu",
+            "a", "aa", "ae", "ai",
+            "e", "ea", "ee", "ei",
+            "i", "ia", "ie",
             "o", "oa", "oe", "oi", "oo", "ou", "ough",
-            "u", "ui",
+            "ui",
             "y"
         ],
         [
             "b", "br", "c", "ck", "ch", "cr", "cs", "ct", "cy",
             "d", "dr", "f", "fh", "g", "gh", "gth",
-            "h", "j", "k", "l", "ll", "m", "mm",
-            "n", "nn", "p", "ph", "qu", "r",
+            "h", "k", "l", "ll", "m", "mm",
+            "n", "nn", "p", "ph", "r",
             "s", "sc", "sh", "sk", "st", "str", "t", "tch", "tr",
-            "v", "w", "x", "y", "z"
+            "w", "x", "y", "z"
         ]
     ]
 }
