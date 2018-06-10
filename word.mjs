@@ -1,8 +1,8 @@
-var pick = function (arr) {
+const pick = function (arr) {
     return arr[Math.floor(Math.random() * arr.length)];
-}
+};
 
-module.exports = function Word(nPhonemes, phonemes)
+export default function word(nPhonemes, phonemes)
 {
     var word = '',
         // Choose vowel or consonant
