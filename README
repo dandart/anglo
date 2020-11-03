@@ -5,6 +5,6 @@ First parameter is number of phonemes to use.
 Second parameter is language to use (sample en_GB letters included).
 
 Use like:
-./generator 6 en_GB
+./generator.sh 6 en_GB
 
 Known issues: Could do with some translations. Only swaps a pair of types of phoneme.
